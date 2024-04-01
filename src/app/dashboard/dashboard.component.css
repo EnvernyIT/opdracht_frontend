@@ -1,0 +1,13 @@
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;}
+h2{
+    margin-top: 25px;
+    font-size: 60px;
+}
+p{
+    margin-top: 15px;
+    font-size: 25px;
+}

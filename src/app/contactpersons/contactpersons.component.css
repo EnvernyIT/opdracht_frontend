@@ -5,30 +5,10 @@ body {
     font-size: 13px;
 }
 
-.toolbar_1 {
-    background: #074c68;
-    display: flex; 
-    align-items: center; 
-    justify-content: center;   
-}
-
-.toolbar_text{
-    color: #f5f5f5;
-    font-size: 25px;
-    display: flex; 
-    align-items: center; 
-    justify-content: center;   
-}
-
 .table-responsive {
     margin: 30px 0;
 }
 
-.newer{
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-  }
 .table-wrapper {
     background: #fff;
     padding: 20px 25px;

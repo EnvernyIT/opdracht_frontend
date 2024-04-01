@@ -1,18 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-import { BehaviorSubject, catchError, map, Observable, of, startWith } from 'rxjs';
-import { AppState } from './interfaces/app-state';
-import { CustomContactPersonResponse } from './interfaces/custom-contact-person-response';
-import { ContactPersonService } from './services/contact-person.service';
-import { DataState } from './enum/data-state.enum';
 import { NgForm } from '@angular/forms';
-import { ContactPerson } from './interfaces/contact-person';
+import { Observable, BehaviorSubject, map, startWith, catchError, of } from 'rxjs';
+import { DataState } from '../enum/data-state.enum';
+import { AppState } from '../interfaces/app-state';
+import { ContactPerson } from '../interfaces/contact-person';
+import { CustomContactPersonResponse } from '../interfaces/custom-contact-person-response';
+import { ContactPersonService } from '../services/contact-person.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  selector: 'app-contactpersons',
+  templateUrl: './contactpersons.component.html',
+  styleUrl: './contactpersons.component.css'
 })
-export class AppComponent implements OnInit {
+export class ContactpersonsComponent implements OnInit {
   appState$: Observable<AppState<CustomContactPersonResponse>>;
   readonly DataState = DataState;
   private dataSubject = new BehaviorSubject<CustomContactPersonResponse>(null);

@@ -5,30 +5,10 @@ body {
     font-size: 13px;
 }
 
-.toolbar_1 {
-    background: #074c68;
-    display: flex; 
-    align-items: center; 
-    justify-content: center;   
-}
-
-.toolbar_text{
-    color: #f5f5f5;
-    font-size: 25px;
-    display: flex; 
-    align-items: center; 
-    justify-content: center;   
-}
-
 .table-responsive {
     margin: 30px 0;
 }
 
-.newer{
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-  }
 .table-wrapper {
     background: #fff;
     padding: 20px 25px;
@@ -294,4 +274,26 @@ table.table .avatar {
 }
 .pointer {
     cursor: pointer;
+}
+
+.searches{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.search{
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.search label{
+    margin-right: 15px;
+    font-weight: 600;
+    font-size: 20px
+}
+
+.search input{
+    width: 250px;
+    height: 30px;
 }
