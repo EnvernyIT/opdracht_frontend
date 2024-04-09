@@ -4,6 +4,7 @@ import { CustomProductionInstallationResponse } from "../interfaces/custom-produ
 import { catchError, never, Observable, tap, throwError } from "rxjs";
 import { error } from "console";
 import { ProductionInstallation } from "../interfaces/production-installation";
+import { ProductionInstallationSave } from "../interfaces/production-install-save";
 
 @Injectable({ providedIn: 'root' })
 export class ProductionInstallationService {
@@ -25,7 +26,7 @@ export class ProductionInstallationService {
                 catchError(this.handleError)
             );
 
-    saveProductionInstallations$ = (productInstallation: ProductionInstallation) => <Observable<CustomProductionInstallationResponse>>
+    saveProductionInstallations$ = (productInstallation: ProductionInstallationSave) => <Observable<CustomProductionInstallationResponse>>
         this.http.post<CustomProductionInstallationResponse>(`${this.apiUrl}/productInstallations/save`, productInstallation)
             .pipe(
                 tap(console.log),

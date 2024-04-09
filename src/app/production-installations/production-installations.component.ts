@@ -7,6 +7,7 @@ import { ProductionInstallationService } from '../services/production-installati
 import { NgForm } from '@angular/forms';
 import { ProductionInstallation } from '../interfaces/production-installation';
 import { response } from 'express';
+import { ProductionInstallationSave } from '../interfaces/production-install-save';
 
 @Component({
   selector: 'app-production-installations',
@@ -40,7 +41,7 @@ export class ProductionInstallationsComponent implements OnInit {
 
   saveProductionInstallation(serverForm: NgForm): void {
     this.isLoading.next(true);
-    this.appState$ = this.productionInstallationService.saveProductionInstallations$(serverForm.value as ProductionInstallation)
+    this.appState$ = this.productionInstallationService.saveProductionInstallations$(serverForm.value as ProductionInstallationSave)
       .pipe(
         map(response => {
           this.dataSubject.next(
